@@ -1,0 +1,592 @@
+fileFormatVersion: 2
+guid: fde6686f4a9a03342b0735fe777fff25
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: GreidRig_Head
+  - first:
+      1: 100004
+    second: GreidRig_knifeBone
+  - first:
+      1: 100006
+    second: GreidRig_LCollarbone
+  - first:
+      1: 100008
+    second: GreidRig_LForearm
+  - first:
+      1: 100010
+    second: GreidRig_LLegCalf
+  - first:
+      1: 100012
+    second: GreidRig_LLegDigit11
+  - first:
+      1: 100014
+    second: GreidRig_LLegFoot
+  - first:
+      1: 100016
+    second: GreidRig_LLegPlatform
+  - first:
+      1: 100018
+    second: GreidRig_LLegThigh
+  - first:
+      1: 100020
+    second: GreidRig_LPalm
+  - first:
+      1: 100022
+    second: GreidRig_LUpperarm
+  - first:
+      1: 100024
+    second: GreidRig_Neck
+  - first:
+      1: 100026
+    second: GreidRig_Pelvis
+  - first:
+      1: 100028
+    second: GreidRig_RArmCollarbone
+  - first:
+      1: 100030
+    second: GreidRig_RArmForearm
+  - first:
+      1: 100032
+    second: GreidRig_RArmPalm
+  - first:
+      1: 100034
+    second: GreidRig_RArmUpperarm
+  - first:
+      1: 100036
+    second: GreidRig_Ribcage
+  - first:
+      1: 100038
+    second: GreidRig_RLegCalf
+  - first:
+      1: 100040
+    second: GreidRig_RLegDigit11
+  - first:
+      1: 100042
+    second: GreidRig_RLegFoot
+  - first:
+      1: 100044
+    second: GreidRig_RLegPlatform
+  - first:
+      1: 100046
+    second: GreidRig_RLegThigh
+  - first:
+      1: 100048
+    second: GreidRig_scabardBone
+  - first:
+      1: 100050
+    second: GreidRig_ShieldBone
+  - first:
+      1: 100052
+    second: GreidRig_shieldBone
+  - first:
+      1: 100054
+    second: GreidRig_Spine1
+  - first:
+      1: 100056
+    second: GreidRig_Spine2
+  - first:
+      1: 100058
+    second: GreidRig_swordBone
+  - first:
+      1: 100060
+    second: GreidRig_
+  - first:
+      1: 100062
+    second: GreidRig_shieldDeployedBone
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: GreidRig_Head
+  - first:
+      4: 400004
+    second: GreidRig_knifeBone
+  - first:
+      4: 400006
+    second: GreidRig_LCollarbone
+  - first:
+      4: 400008
+    second: GreidRig_LForearm
+  - first:
+      4: 400010
+    second: GreidRig_LLegCalf
+  - first:
+      4: 400012
+    second: GreidRig_LLegDigit11
+  - first:
+      4: 400014
+    second: GreidRig_LLegFoot
+  - first:
+      4: 400016
+    second: GreidRig_LLegPlatform
+  - first:
+      4: 400018
+    second: GreidRig_LLegThigh
+  - first:
+      4: 400020
+    second: GreidRig_LPalm
+  - first:
+      4: 400022
+    second: GreidRig_LUpperarm
+  - first:
+      4: 400024
+    second: GreidRig_Neck
+  - first:
+      4: 400026
+    second: GreidRig_Pelvis
+  - first:
+      4: 400028
+    second: GreidRig_RArmCollarbone
+  - first:
+      4: 400030
+    second: GreidRig_RArmForearm
+  - first:
+      4: 400032
+    second: GreidRig_RArmPalm
+  - first:
+      4: 400034
+    second: GreidRig_RArmUpperarm
+  - first:
+      4: 400036
+    second: GreidRig_Ribcage
+  - first:
+      4: 400038
+    second: GreidRig_RLegCalf
+  - first:
+      4: 400040
+    second: GreidRig_RLegDigit11
+  - first:
+      4: 400042
+    second: GreidRig_RLegFoot
+  - first:
+      4: 400044
+    second: GreidRig_RLegPlatform
+  - first:
+      4: 400046
+    second: GreidRig_RLegThigh
+  - first:
+      4: 400048
+    second: GreidRig_scabardBone
+  - first:
+      4: 400050
+    second: GreidRig_ShieldBone
+  - first:
+      4: 400052
+    second: GreidRig_shieldBone
+  - first:
+      4: 400054
+    second: GreidRig_Spine1
+  - first:
+      4: 400056
+    second: GreidRig_Spine2
+  - first:
+      4: 400058
+    second: GreidRig_swordBone
+  - first:
+      4: 400060
+    second: GreidRig_
+  - first:
+      4: 400062
+    second: GreidRig_shieldDeployedBone
+  - first:
+      74: 7400000
+    second: Idle_Battle_Simple
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      111: 11100000
+    second: //RootNode
+  externalObjects: {}
+  materials:
+    materialImportMode: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Copied Avatar Rig Configuration mis-match. Inbetween bone
+      rotation in copied configuration does not match rotation in animation file:\n\t'GreidRig_Spine2'
+      : rotation error = 7.113139 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Take 001' has import animation warnings that
+      might lower retargeting quality:\n\t'GreidRig_Spine2' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\n"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 2
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle_Battle_Simple
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 170
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GreidRig_
+        weight: 0
+      - path: GreidRig_LLegPlatform
+        weight: 0
+      - path: GreidRig_Pelvis
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_knifeBone
+        weight: 0
+      - path: GreidRig_Pelvis/GreidRig_LLegThigh
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_LLegThigh/GreidRig_LLegCalf
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_LLegThigh/GreidRig_LLegCalf/GreidRig_LLegFoot
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_LLegThigh/GreidRig_LLegCalf/GreidRig_LLegFoot/GreidRig_LLegDigit11
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_RLegThigh
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_RLegThigh/GreidRig_RLegCalf
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_RLegThigh/GreidRig_RLegCalf/GreidRig_RLegFoot
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_RLegThigh/GreidRig_RLegCalf/GreidRig_RLegFoot/GreidRig_RLegDigit11
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_scabardBone
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_LCollarbone
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_LCollarbone/GreidRig_LUpperarm
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_LCollarbone/GreidRig_LUpperarm/GreidRig_LForearm
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_LCollarbone/GreidRig_LUpperarm/GreidRig_LForearm/GreidRig_LPalm
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_LCollarbone/GreidRig_LUpperarm/GreidRig_LForearm/GreidRig_LPalm/GreidRig_shieldDeployedBone
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_Neck
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_Neck/GreidRig_Head
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_RArmCollarbone
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_RArmCollarbone/GreidRig_RArmUpperarm
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_RArmCollarbone/GreidRig_RArmUpperarm/GreidRig_RArmForearm
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_RArmCollarbone/GreidRig_RArmUpperarm/GreidRig_RArmForearm/GreidRig_RArmPalm
+        weight: 1
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_RArmCollarbone/GreidRig_RArmUpperarm/GreidRig_RArmForearm/GreidRig_RArmPalm/GreidRig_swordBone
+        weight: 0
+      - path: GreidRig_Pelvis/GreidRig_Spine1/GreidRig_Spine2/GreidRig_Ribcage/GreidRig_ShieldBone
+        weight: 0
+      - path: GreidRig_RLegPlatform
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0.9
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: Greid(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Greid_mesh
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GreidRig_LLegPlatform
+      parentName: 
+      position: {x: -0.12862425, y: -0.000000005781977, z: 0.02376137}
+      rotation: {x: 0.5319055, y: -0.53190535, z: -0.4659148, w: 0.46591488}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: GreidRig_RLegPlatform
+      parentName: 
+      position: {x: 0.12862425, y: -0.000000005781984, z: 0.023761408}
+      rotation: {x: 0.46591496, y: -0.46591488, z: -0.5319053, w: 0.5319054}
+      scale: {x: 1, y: 1, z: 1}
+    - name: GreidRig_Pelvis
+      parentName: 
+      position: {x: 0.000000047813337, y: 0.8986496, z: -0.04543324}
+      rotation: {x: 0.49912703, y: -0.5008716, z: -0.4991269, w: 0.5008715}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: GreidRig_Spine1
+      parentName: 
+      position: {x: -0.045647047, y: -0.0034924746, z: -0.00000000866773}
+      rotation: {x: -0.000000044703484, y: -0.000000029802322, z: -0.066092655, w: 0.9978135}
+      scale: {x: 1.0000002, y: 1.0000002, z: 0.9999999}
+    - name: GreidRig_Spine2
+      parentName: 
+      position: {x: -0.2807583, y: 0, z: 0}
+      rotation: {x: -0.000000029802322, y: 0.000000014901161, z: 0.14193366, w: 0.9898763}
+      scale: {x: 0.99999994, y: 1.0000001, z: 1.0000001}
+    - name: GreidRig_Ribcage
+      parentName: 
+      position: {x: -0.23916854, y: 0, z: 0}
+      rotation: {x: 0.00000014156097, y: 0.00000092387165, z: -0.5000329, w: 0.8660065}
+      scale: {x: 0.9999997, y: 0.9999995, z: 1}
+    - name: GreidRig_ShieldBone
+      parentName: 
+      position: {x: 0.22329864, y: -0.11232487, z: 0.06030845}
+      rotation: {x: -0.07491196, y: 0.076839775, z: 0.69403636, w: 0.711897}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shield_mesh
+      parentName: 
+      position: {x: -0.038974743, y: -0.0038363647, z: -0.0019397067}
+      rotation: {x: 0.4861679, y: 0.5160922, z: 0.50114465, w: -0.4961287}
+      scale: {x: 1.0000002, y: 1, z: 0.99999994}
+    - name: GreidRig_Neck
+      parentName: 
+      position: {x: -0.00079315185, y: -0.0034924746, z: -0.0000000067071366}
+      rotation: {x: -0.00000017881385, y: -0.0000006556508, z: 0.21356854, w: 0.97692806}
+      scale: {x: 1.0000001, y: 1, z: 1.0000001}
+    - name: GreidRig_Head
+      parentName: 
+      position: {x: -0.10012512, y: -0.000000038146972, z: 0}
+      rotation: {x: 0.000000059604645, y: 0.000000059604645, z: 0.18151776, w: 0.9833877}
+      scale: {x: 0.9999998, y: 1, z: 0.9999999}
+    - name: GreidRig_LCollarbone
+      parentName: 
+      position: {x: 0.04366989, y: 0.10543432, z: 0.030406203}
+      rotation: {x: 0.04964805, y: 0.7151856, z: 0.17543843, w: 0.6747341}
+      scale: {x: 0.9999999, y: 0.99999976, z: 0.9999998}
+    - name: GreidRig_LUpperarm
+      parentName: 
+      position: {x: -0.17440298, y: -0.000000114440915, z: 0.00000015258789}
+      rotation: {x: 0.12835713, y: -0.0021220082, z: -0.1733171, w: 0.9764636}
+      scale: {x: 1, y: 1.0000002, z: 1.0000001}
+    - name: GreidRig_LForearm
+      parentName: 
+      position: {x: -0.2623874, y: -0.000000085830685, z: 0.00000015258789}
+      rotation: {x: 0.0471958, y: -0.022630205, z: -0.019050732, w: 0.99844754}
+      scale: {x: 0.9999998, y: 0.9999997, z: 1.0000002}
+    - name: GreidRig_LPalm
+      parentName: 
+      position: {x: -0.24307136, y: 0.00000125885, z: -0.00000030517577}
+      rotation: {x: -0.755371, y: 0.0037938212, z: 0.08193743, w: 0.6501435}
+      scale: {x: 1, y: 1.0000008, z: 0.9999993}
+    - name: GreidRig_shieldBone
+      parentName: 
+      position: {x: -0.054618947, y: -0.015520782, z: 0.00000034570692}
+      rotation: {x: -0.0000045672487, y: 0.0000041253597, z: -0.59613013, w: 0.8028879}
+      scale: {x: 1.0000006, y: 1.0000001, z: 0.9999993}
+    - name: shield_deployed_mesh
+      parentName: 
+      position: {x: -0.021196898, y: -0.015785217, z: -0.00015820026}
+      rotation: {x: 0.49139902, y: 0.51616746, z: 0.49617785, w: -0.4958888}
+      scale: {x: 0.9999972, y: 1.0000004, z: 1.0000025}
+    - name: GreidRig_RArmCollarbone
+      parentName: 
+      position: {x: 0.04366989, y: 0.10543432, z: -0.030406198}
+      rotation: {x: 0.049647868, y: 0.7151862, z: -0.17543878, w: -0.67473334}
+      scale: {x: 1.0000004, y: 1.0000001, z: 1.0000001}
+    - name: GreidRig_RArmUpperarm
+      parentName: 
+      position: {x: -0.174403, y: 0.000000076293944, z: 0}
+      rotation: {x: -0.12835594, y: 0.0021206953, z: -0.173318, w: 0.9764636}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.99999994}
+    - name: GreidRig_RArmForearm
+      parentName: 
+      position: {x: -0.26238742, y: -0.000000085830685, z: -0.00000015258789}
+      rotation: {x: -0.04719868, y: 0.022630952, z: -0.019050514, w: 0.9984474}
+      scale: {x: 0.99999976, y: 0.9999998, z: 1.0000001}
+    - name: GreidRig_RArmPalm
+      parentName: 
+      position: {x: -0.24307139, y: 0.00000125885, z: 0.00000030517577}
+      rotation: {x: 0.752035, y: -0.055047486, z: 0.07181042, w: 0.652883}
+      scale: {x: 1.0000006, y: 1.0000013, z: 0.9999994}
+    - name: GreidRig_swordBone
+      parentName: 
+      position: {x: -0.06380096, y: -0.014974975, z: 0.0053768945}
+      rotation: {x: 0.001475641, y: -0.7094186, z: 0.0013815599, w: 0.70478445}
+      scale: {x: 0.9999991, y: 1.0000007, z: 1.0000001}
+    - name: axe
+      parentName: 
+      position: {x: 0.26655665, y: -0.005578003, z: 0.0004276657}
+      rotation: {x: 0.5069318, y: 0.4943381, z: -0.49877855, w: -0.49987}
+      scale: {x: 0.9999997, y: 0.9999975, z: 1.000003}
+    - name: sword_deployed_mesh
+      parentName: 
+      position: {x: -0.010708935, y: 0.0001448059, z: 0.002273712}
+      rotation: {x: 0.70470244, y: -0.007827774, z: 0.709326, w: -0.013778137}
+      scale: {x: 1.0000006, y: 0.9999981, z: 0.99999726}
+    - name: GreidRig_knifeBone
+      parentName: 
+      position: {x: -0.14667106, y: 0.08041789, z: 0.16465592}
+      rotation: {x: -0.037214965, y: 0.36836743, z: 0.92886066, w: -0.011767477}
+      scale: {x: 0.99999976, y: 0.99999994, z: 1}
+    - name: knife
+      parentName: 
+      position: {x: -1.0304534, y: -0.09086747, z: -0.22690977}
+      rotation: {x: -0.25096214, y: 0.63001883, z: -0.26989514, w: 0.6835575}
+      scale: {x: 1, y: 0.99999994, z: 0.99999994}
+    - name: GreidRig_LLegThigh
+      parentName: 
+      position: {x: -0.017192611, y: 0.046885267, z: 0.08785235}
+      rotation: {x: 0.014437852, y: 0.99931586, z: 0.028541591, w: 0.01856759}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: GreidRig_LLegCalf
+      parentName: 
+      position: {x: -0.35736105, y: 0.000004377365, z: 0.0000034046172}
+      rotation: {x: -0.0011341423, y: -0.0065723956, z: 0.027214214, w: 0.9996074}
+      scale: {x: 0.99999976, y: 0.99999964, z: 0.99999994}
+    - name: GreidRig_LLegFoot
+      parentName: 
+      position: {x: -0.45164198, y: 0, z: 0}
+      rotation: {x: -0.046727415, y: 0.003986418, z: -0.48589826, w: 0.8727563}
+      scale: {x: 0.99999857, y: 1.0000014, z: 1.0000004}
+    - name: GreidRig_LLegDigit11
+      parentName: 
+      position: {x: -0.14582273, y: 0.015289888, z: 0.001461544}
+      rotation: {x: -0.0010133086, y: 0.0044762683, z: -0.31039938, w: 0.9505952}
+      scale: {x: 1, y: 0.9999999, z: 1.0000002}
+    - name: GreidRig_RLegThigh
+      parentName: 
+      position: {x: -0.017192611, y: 0.04688527, z: -0.08785235}
+      rotation: {x: 0.014443366, y: 0.99931824, z: -0.028455224, w: -0.018568246}
+      scale: {x: 0.9999998, y: 1, z: 1}
+    - name: GreidRig_RLegCalf
+      parentName: 
+      position: {x: -0.35736126, y: 0.000004377365, z: -0.0000033855438}
+      rotation: {x: 0.0011560916, y: 0.0066137603, z: 0.027210753, w: 0.9996072}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1.0000002}
+    - name: GreidRig_RLegFoot
+      parentName: 
+      position: {x: -0.45164198, y: 0, z: -0.000000009536743}
+      rotation: {x: 0.0468058, y: -0.003997192, z: -0.4858958, w: 0.8727535}
+      scale: {x: 0.99999785, y: 1.0000012, z: 1.0000002}
+    - name: GreidRig_RLegDigit11
+      parentName: 
+      position: {x: -0.14582273, y: 0.015289892, z: -0.001461544}
+      rotation: {x: 0.0010132043, y: -0.0044762357, z: -0.31039926, w: 0.9505952}
+      scale: {x: 1.0000002, y: 0.99999976, z: 0.99999994}
+    - name: GreidRig_scabardBone
+      parentName: 
+      position: {x: -0.051793974, y: 0.0001276636, z: -0.18267626}
+      rotation: {x: 0.023239017, y: 0.110289544, z: 0.9936239, w: -0.0028029978}
+      scale: {x: 0.9999994, y: 0.9999995, z: 0.99999994}
+    - name: scabard
+      parentName: 
+      position: {x: -0.9410243, y: 0.009038346, z: 0.23059545}
+      rotation: {x: -0.074807584, y: 0.7188901, z: -0.081222005, w: 0.68629724}
+      scale: {x: 1.0000001, y: 0.99999994, z: 1}
+    - name: sword_mesh
+      parentName: 
+      position: {x: 0.13633186, y: -0.0012991738, z: 0.0006594086}
+      rotation: {x: 0.5059241, y: 0.4918235, z: 0.50659096, w: 0.4954958}
+      scale: {x: 1, y: 1, z: 0.99999994}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 1
+    hasExtraRoot: 1
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 1
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
