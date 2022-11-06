@@ -128,4 +128,54 @@ public class Combat : MonoBehaviour
             }
         }
     }
+
+    public List<Soldier> CreateNewSoldierList(int NumberOfSoldiers, int width, GameObject GO)
+    {
+        try
+        {
+            List<Soldier> Soldiers = new List<Soldier>();
+
+            int TotalNumberOfColumns = NumberOfSoldiers / width;
+
+            if (NumberOfSoldiers % width != 0)
+                TotalNumberOfColumns++;
+
+            int CurrentRowIsEven = 0;
+
+            if (width % 2 == 0)
+                CurrentRowIsEven = 1;
+
+            for (int RowIndex = 0; RowIndex < TotalNumberOfColumns; RowIndex++)
+            {
+                int CurrentRowWidth = 0;
+
+                if (Soldiers.Count + width < NumberOfSoldiers)
+                    CurrentRowWidth = width;
+                else
+                    CurrentRowWidth = NumberOfSoldiers - Soldiers.Count;
+
+                int WidthOffset = 0;
+                float xPositionOffset = 0f;
+
+                if (CurrentRowWidth % 2 != 0)
+                    WidthOffset = 1;
+                else
+                    xPositionOffset = 0.5f;
+
+                for (int x = -(CurrentRowWidth / 2) + CurrentRowIsEven; x < (CurrentRowWidth / 2) + WidthOffset + CurrentRowIsEven; x++)
+                {
+                    //Rank rank = Rank.Legionary;
+
+                    //GameObject Prefab = Resources.Load<GameObject>()
+                }
+            }
+
+            return Soldiers;
+        }
+        catch(Exception ex)
+        {
+            UnityEngine.Debug.Log(ex.Message);
+            return null;
+        }
+    }
 }
