@@ -30,6 +30,8 @@ public class Combat : MonoBehaviour
     {
         public string Owner;
         public int Width;
+        public int MaxWidth;
+        public int MinWidth;
         public GameObject DivisionGO;
         public List<Soldier> SoldierList = new List<Soldier>();
         public Side _Side;
@@ -87,7 +89,7 @@ public class Combat : MonoBehaviour
 
             div.IsInMotion = true;
 
-            //CalculateMinMaxWidth(div);
+            CalculateMinMaxWidth(div);
             //FunctionsToRunInChildThread.Add(() => AssignSoldiersToTheirDiv(div));
 
             GO.transform.eulerAngles = new Vector3(0f, 0f, 0f);
@@ -220,5 +222,34 @@ public class Combat : MonoBehaviour
             Debug.Log(ex.Message);
             return null;
         }
+    }
+
+    public void CalculateMaxAndMinWidth(Division div)
+    {
+        //D >= W * 8
+        //W >= D * 0.5f
+        int SoldierCount = div.SoldierList.Count;
+
+        int Depth = 0;
+        int MaxWidth = SoldierCount;
+
+        while (Depth * 8 < MaxWidth)
+        {
+            Depth++;
+            MaxWidth = SoldierCount / Depth;
+        }
+
+        div.MaxWidth = MaxWidth;
+
+        Depth = SoldierCount;
+        int MinWidth = 0;
+
+        while (2 * MinWidth < Depth)
+        {
+            MinWidth++;
+            Depth = SoldierCount / MinWidth;
+        }
+
+        div.MinWidth = MinWidth;
     }
 }
