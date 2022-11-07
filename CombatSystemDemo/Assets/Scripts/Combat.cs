@@ -1,15 +1,29 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Combat : MonoBehaviour
 {
     public class Soldier
     {
         public GameObject SoldierGO;
+        public Animation Anim;
+        public NavMeshAgent Agent;
+        public Vector3 PositionInFormation;
+        public Vector3 CurrentPosition;
+        public Trigger trigger;
+        public Rank rank;
+
+        public Soldier (GameObject GO, /*Animation anim,*/ NavMeshAgent agent, Rank _rank)
+        {
+            SoldierGO = GO;
+            //Anim = anim;
+            Agent = agent;
+            rank = _rank;
+        }
     }
 
     public class Division
@@ -43,13 +57,18 @@ public class Combat : MonoBehaviour
         Rect, Wedge
     }
 
+    public enum Rank
+    {
+        Legionary, Centurion
+    }
+
     private bool ShutDownChildThread = false;
     private Thread ChildThread;
     public List<Action> FunctionsToRunInChildThread = new List<Action>();
 
     public List<Division> DivisionList = new List<Division>();
 
-    public Stopwatch UpdateLogicTimer;
+    public System.Diagnostics.Stopwatch UpdateLogicTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -64,7 +83,7 @@ public class Combat : MonoBehaviour
             GO.name = "Roman Division " + x.ToString();
 
             //Add the CreateNewSoldierList Function 
-            Division div = new Division("Rome", Side.Friendly, Formation.Rect, GO, new List<Soldier>(), DivisionWidth);
+            Division div = new Division("Rome", Side.Friendly, Formation.Rect, GO, CreateNewSoldierList(45, 12, GO), DivisionWidth);
 
             div.IsInMotion = true;
 
@@ -91,7 +110,7 @@ public class Combat : MonoBehaviour
 
     public void ChildThreadFunction()
     {
-        UpdateLogicTimer = Stopwatch.StartNew();
+        UpdateLogicTimer = System.Diagnostics.Stopwatch.StartNew();
 
         while (true)
         {
@@ -129,18 +148,18 @@ public class Combat : MonoBehaviour
         }
     }
 
-    public List<Soldier> CreateNewSoldierList(int NumberOfSoldiers, int width, GameObject GO)
+    public List<Soldier> CreateNewSoldierList(int NumberOfSoldiers, int width, GameObject GO/*, State EquipState, Military.UnitSubType sub, Military.UnitType Type = Military.UnitType.HeavyInfantry*/)
     {
         try
         {
-            List<Soldier> Soldiers = new List<Soldier>();
+            List<Soldier> soldiers = new List<Soldier>();
 
             int TotalNumberOfColumns = NumberOfSoldiers / width;
+            int CurrentRowIsEven = 0;
 
+            //if Total # of Soldiers is not divisible by the width, add 1
             if (NumberOfSoldiers % width != 0)
                 TotalNumberOfColumns++;
-
-            int CurrentRowIsEven = 0;
 
             if (width % 2 == 0)
                 CurrentRowIsEven = 1;
@@ -149,10 +168,10 @@ public class Combat : MonoBehaviour
             {
                 int CurrentRowWidth = 0;
 
-                if (Soldiers.Count + width < NumberOfSoldiers)
+                if (soldiers.Count + width < NumberOfSoldiers)
                     CurrentRowWidth = width;
                 else
-                    CurrentRowWidth = NumberOfSoldiers - Soldiers.Count;
+                    CurrentRowWidth = NumberOfSoldiers - soldiers.Count;
 
                 int WidthOffset = 0;
                 float xPositionOffset = 0f;
@@ -164,17 +183,41 @@ public class Combat : MonoBehaviour
 
                 for (int x = -(CurrentRowWidth / 2) + CurrentRowIsEven; x < (CurrentRowWidth / 2) + WidthOffset + CurrentRowIsEven; x++)
                 {
-                    //Rank rank = Rank.Legionary;
+                    Rank rank = Rank.Legionary;
 
-                    //GameObject Prefab = Resources.Load<GameObject>()
+                    //This offset bit is convoluted, basically it'll be -1 when width is even and zero when width is odd
+                    if (RowIndex == 0 && x == (width / 2) /*- 1 + WidthOffset*/)
+                        rank = Rank.Centurion;
+
+                    //GameObject[] Cunts = Resources.LoadAll<GameObject>("Updated Units/");
+
+                    //GameObject Prefab = Resources.Load<GameObject>("New Export Folder/" + rank.ToString() + " " + EquipState.ToString());
+                    GameObject Prefab = Resources.Load<GameObject>("Updated Units/" + rank.ToString());
+
+                    GameObject UnitGO = Instantiate(Prefab, new Vector3(GO.transform.position.x + x + xPositionOffset, 0f, GO.transform.position.z - (RowIndex * 1f)), GO.transform.rotation, GO.transform);
+
+                    UnitGO.transform.Find(rank.ToString() + " Idle").gameObject.SetActive(true);
+
+                    UnitGO.transform.tag = "Division";
+
+                    soldiers.Add(new Soldier(UnitGO, UnitGO.GetComponent<NavMeshAgent>(), rank));
+
+                    soldiers[soldiers.Count - 1].PositionInFormation = new Vector2(x, RowIndex);
                 }
             }
 
-            return Soldiers;
+
+            foreach (Soldier sol in soldiers)
+                sol.trigger = sol.SoldierGO.transform.Find("Cone").GetComponent<Trigger>();
+
+            foreach (Soldier sol in soldiers)
+                sol.CurrentPosition = sol.SoldierGO.transform.position;
+
+            return soldiers;
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-            UnityEngine.Debug.Log(ex.Message);
+            Debug.Log(ex.Message);
             return null;
         }
     }
