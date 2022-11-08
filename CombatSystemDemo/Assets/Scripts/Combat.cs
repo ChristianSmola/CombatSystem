@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,6 +13,7 @@ public class Combat : MonoBehaviour
         public GameObject SoldierGO;
         public Animation Anim;
         public NavMeshAgent Agent;
+        public Division AssignedDivision;
         public Vector3 PositionInFormation;
         public Vector3 CurrentPosition;
         public Trigger trigger;
@@ -33,10 +35,12 @@ public class Combat : MonoBehaviour
         public int MaxWidth;
         public int MinWidth;
         public GameObject DivisionGO;
+        public List<Soldier> CornerSoldiers = new List<Soldier>();
         public List<Soldier> SoldierList = new List<Soldier>();
         public Side _Side;
         public Formation formation;
         public bool IsInMotion = false;
+        public List<Vector3> Boundaries;
 
         public Division(string owner, Side side, Formation form, GameObject GO, List<Soldier> Soldiers, int width)
         {
@@ -89,12 +93,12 @@ public class Combat : MonoBehaviour
 
             div.IsInMotion = true;
 
-            CalculateMinMaxWidth(div);
-            //FunctionsToRunInChildThread.Add(() => AssignSoldiersToTheirDiv(div));
+            CalculateMaxAndMinWidth(div);
+            FunctionsToRunInChildThread.Add(() => AssignSoldiersToTheirDiv(div));
 
             GO.transform.eulerAngles = new Vector3(0f, 0f, 0f);
 
-            //EstablishDivisionBorders(div);
+            EstablishDivisionBorders(div);
             DivisionList.Add(div);
         }
 
@@ -191,9 +195,6 @@ public class Combat : MonoBehaviour
                     if (RowIndex == 0 && x == (width / 2) /*- 1 + WidthOffset*/)
                         rank = Rank.Centurion;
 
-                    //GameObject[] Cunts = Resources.LoadAll<GameObject>("Updated Units/");
-
-                    //GameObject Prefab = Resources.Load<GameObject>("New Export Folder/" + rank.ToString() + " " + EquipState.ToString());
                     GameObject Prefab = Resources.Load<GameObject>("Updated Units/" + rank.ToString());
 
                     GameObject UnitGO = Instantiate(Prefab, new Vector3(GO.transform.position.x + x + xPositionOffset, 0f, GO.transform.position.z - (RowIndex * 1f)), GO.transform.rotation, GO.transform);
@@ -210,10 +211,10 @@ public class Combat : MonoBehaviour
 
 
             foreach (Soldier sol in soldiers)
+            {
                 sol.trigger = sol.SoldierGO.transform.Find("Cone").GetComponent<Trigger>();
-
-            foreach (Soldier sol in soldiers)
                 sol.CurrentPosition = sol.SoldierGO.transform.position;
+            }
 
             return soldiers;
         }
@@ -221,6 +222,19 @@ public class Combat : MonoBehaviour
         {
             Debug.Log(ex.Message);
             return null;
+        }
+    }
+
+    public void AssignSoldiersToTheirDiv(Division div)
+    {
+        try
+        {
+            for (int x = 0; x < div.SoldierList.Count; x++)
+                div.SoldierList[x].AssignedDivision = div;
+        }
+        catch(Exception ex)
+        {
+            Debug.Log(ex.Message);
         }
     }
 
@@ -251,5 +265,33 @@ public class Combat : MonoBehaviour
         }
 
         div.MinWidth = MinWidth;
+    }
+
+    public void EstablishDivisionBorders(Division div)
+    {
+        try
+        {
+            int DivDepth = (div.SoldierList.Count / div.Width) - 1;
+
+            List<Soldier> FirstRow = div.SoldierList.Where(S => S.PositionInFormation.y == 0).OrderByDescending(S => S.PositionInFormation.x).ToList();
+            List<Soldier> LastFullRow = div.SoldierList.Where(S => S.PositionInFormation.y == (div.SoldierList.Count / div.Width) - 1).OrderByDescending(S => S.PositionInFormation.x).ToList();
+
+            div.CornerSoldiers.Add(FirstRow[0]);
+            div.CornerSoldiers.Add(FirstRow[FirstRow.Count - 1]);
+            div.CornerSoldiers.Add(LastFullRow[0]);
+            div.CornerSoldiers.Add(LastFullRow[LastFullRow.Count - 1]);
+
+            float PositiveXPos = FirstRow[0].PositionInFormation.x;
+            float NegativexPos = FirstRow[FirstRow.Count - 1].PositionInFormation.x;
+
+            div.Boundaries.Add(FirstRow[0].SoldierGO.transform.position);
+            div.Boundaries.Add(FirstRow[FirstRow.Count - 1].SoldierGO.transform.position);
+            div.Boundaries.Add(LastFullRow[0].SoldierGO.transform.position);
+            div.Boundaries.Add(LastFullRow[LastFullRow.Count - 1].SoldierGO.transform.position);
+        }
+        catch (Exception ex)
+        {
+            Debug.Log(ex.Message);
+        }
     }
 }
