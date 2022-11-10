@@ -111,7 +111,8 @@ public class Combat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //This is a Comment
+        //This is a Comment
     }
 
     public void ChildThreadFunction()
